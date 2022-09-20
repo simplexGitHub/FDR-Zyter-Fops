@@ -1,0 +1,19 @@
+{
+  "title": "ASYNC_RESPONSE",
+  "x-stoplight": {
+    "id": "2b349f1a4f5b0"
+  },
+  "type": "object",
+  "description": "General async response",
+  "properties": {
+    "success": {
+      "type": "boolean"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "success"
+  ]
+}

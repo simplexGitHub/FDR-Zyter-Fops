@@ -19,7 +19,14 @@
         "operationId": "post-api-openDroneControlApp",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "../Models/ASYNC_RESPONSE.json"
+                }
+              }
+            }
           }
         },
         "description": "Call for open the Drone and Gimbal control application tab. The application will be open in the context of the drone defined by the drone Id. ",
