@@ -1,0 +1,71 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "qibchf8xbwru9"
+  },
+  "info": {
+    "title": "DroneAndGimbalControl",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/api/openDroneControlApp": {
+      "post": {
+        "summary": "openDroneControlApp",
+        "operationId": "post-api-openDroneControlApp",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "description": "Call for open the Drone and Gimbal control application tab. The application will be open in the context of the drone defined by the drone Id. ",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "droneId": {
+                    "type": "string",
+                    "description": "The drone that will be controlled by the application"
+                  },
+                  "missionId": {
+                    "type": "string",
+                    "description": "Zyter system mission id"
+                  },
+                  "streamId": {
+                    "type": "string",
+                    "description": "Use for the stream url"
+                  },
+                  "streamToken": {
+                    "type": "string",
+                    "description": "Use for the stream url"
+                  },
+                  "JwtToken": {
+                    "type": "string",
+                    "description": "Use for the stream url"
+                  }
+                },
+                "required": [
+                  "droneId",
+                  "missionId",
+                  "streamId",
+                  "streamToken",
+                  "JwtToken"
+                ]
+              }
+            }
+          },
+          "description": "The parameters for the application operation"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {}
+  }
+}
