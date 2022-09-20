@@ -1,0 +1,12 @@
+{
+  "title": "temp",
+  "x-stoplight": {
+    "id": "6sivck9at4i4i"
+  },
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    }
+  }
+}
