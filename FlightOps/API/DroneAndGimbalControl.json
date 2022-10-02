@@ -23,7 +23,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "../Models/ASYNC_RESPONSE.json"
+                  "type": "object",
+                  "properties": {
+                    "generalResponse": {
+                      "$ref": "../Models/ASYNC_RESPONSE.json"
+                    },
+                    "IsNeedNewTab": {
+                      "type": "boolean",
+                      "description": "If true then - open new Tab with the url defined in the \"urlForNewTab\" field. If false - no need to open new tab.\nThe drone and joystick application will change to the drone and mission context anyway"
+                    },
+                    "urlForNewTab": {
+                      "type": "string",
+                      "description": "The url for openning new tab"
+                    }
+                  },
+                  "required": [
+                    "generalResponse",
+                    "IsNeedNewTab"
+                  ]
                 }
               }
             }
