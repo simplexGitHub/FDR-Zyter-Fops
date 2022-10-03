@@ -11,17 +11,9 @@
     },
     "description": {
       "type": "string"
-    },
-    "isNeedToOpenTab": {
-      "type": "boolean",
-      "description": "If there is a need to open a new Tab then call to open new tab with the url sent in the \"newTabUrl\" field. If the field is false - no need to open new tab"
-    },
-    "": {
-      "type": "string"
     }
   },
   "required": [
-    "success",
-    "isNeedToOpenTab"
+    "success"
   ]
 }
