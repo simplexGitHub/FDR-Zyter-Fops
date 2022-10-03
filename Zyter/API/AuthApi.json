@@ -1,0 +1,97 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "1n850ilk8jhke"
+  },
+  "info": {
+    "title": "AuthApi",
+    "version": "1.0",
+    "description": ""
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/v1/users/auth": {
+      "parameters": [],
+      "get": {
+        "summary": "Check User is authorize",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "boolean"
+                    },
+                    "data": {
+                      "type": "string"
+                    }
+                  },
+                  "x-examples": {
+                    "example-1": {
+                      "status": true,
+                      "data": "Authorised User"
+                    }
+                  }
+                },
+                "examples": {
+                  "check user authorized or not": {
+                    "value": {
+                      "status": true,
+                      "data": "Authorised User"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden"
+          }
+        },
+        "operationId": "Authorized-API",
+        "description": "Check user is authorized or not",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "header",
+            "name": "Authorization",
+            "description": "Bearer token is required"
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "User": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "boolean"
+          },
+          "data": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "example-1": {
+            "status": true,
+            "data": "Authorised User"
+          }
+        },
+        "title": "Authorized user",
+        "description": ""
+      }
+    }
+  }
+}
